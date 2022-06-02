@@ -1,0 +1,18 @@
+@mixin grid ($columnas, $c-gap, $r-gap) {
+    display: grid;
+    grid-template-columns: repeat($columnas, 1fr);
+    column-gap: $c-gap;
+    row-gap: $r-gap;
+    justify-items: center;
+    align-items: center;
+}
+@mixin tablet {
+    @media (max-width: 768px) {
+        @content;
+    }
+}
+@mixin desktop {
+    @media (max-width: 1200px) {
+        @content;
+    }
+}

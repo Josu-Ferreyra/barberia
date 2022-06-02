@@ -1,0 +1,38 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "My own portfolio",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Josu-Ferreyra/portfolio.git"
+  },
+  "keywords": [
+    "Josué",
+    "Ferreyra",
+    "Web",
+    "Developer",
+    "Front",
+    "End",
+    "Junior"
+  ],
+  "author": "Josué Ferreyra",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Josu-Ferreyra/portfolio/issues"
+  },
+  "homepage": "https://github.com/Josu-Ferreyra/portfolio#readme",
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-concat": "^2.6.1",
+    "gulp-htmlmin": "^5.0.1",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-minify": "^3.1.0",
+    "gulp-sass": "^5.1.0",
+    "gulp-webp": "^4.0.1",
+    "sass": "^1.52.1"
+  }
+}

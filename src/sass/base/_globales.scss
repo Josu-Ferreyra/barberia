@@ -1,0 +1,35 @@
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;   // 10px = 1rem
+    font-family: $font;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+h1,h2,h3,h4,p,a{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+h1,h2{
+    font-weight: 700;
+}
+h3,h4{
+    font-weight: 400;
+}
+p,a {
+    font-weight: 300;
+    font-size: 2rem;
+}
+h1{
+    font-size: 4rem;
+}
+h2{
+    font-size: 3.5rem;
+}
+h3{
+    font-size: 3rem;
+}
+h4{
+    font-size: 2.5rem;
+}
