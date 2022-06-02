@@ -1,0 +1,34 @@
+#servicios{
+    @include grid(1,0,0);
+    height: 100vh;
+    width: 100vw;
+    img{
+        max-width: 80%;
+        height: auto;
+    }
+}
+#catalogo{
+    background-color: lighten($color02, 30);
+    width: 100%;
+    height: 100%;
+    .servicio{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 90%;
+        margin: 2rem auto;
+        border: .25rem solid $color02;
+        border-radius: 1rem;
+        transition: 
+            border .2s ease;
+        &:hover{
+            border: 1rem solid $color02;
+            cursor: pointer;
+        }
+        .nombreServicio{
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+    }
+}

@@ -486,3 +486,43 @@ h4 {
     text-shadow: 1rem 0 #000;
   }
 }
+
+#servicios {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  column-gap: 0;
+  row-gap: 0;
+  justify-items: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+}
+#servicios img {
+  max-width: 80%;
+  height: auto;
+}
+
+#catalogo {
+  background-color: #ff9696;
+  width: 100%;
+  height: 100%;
+}
+#catalogo .servicio {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 90%;
+  margin: 2rem auto;
+  border: 0.25rem solid #fc0000;
+  border-radius: 1rem;
+  transition: border 0.2s ease;
+}
+#catalogo .servicio:hover {
+  border: 1rem solid #fc0000;
+  cursor: pointer;
+}
+#catalogo .servicio .nombreServicio {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
