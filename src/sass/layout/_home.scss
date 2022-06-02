@@ -1,0 +1,85 @@
+#home{
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    img{
+        position: absolute;
+        align-self: center;
+        right: 0;
+        left: 0;
+        margin: 0 auto;        
+        height: auto;
+        max-width: 45vw;
+        @include tablet{
+            max-width: 25vw;
+        }
+        @include desktop{
+            width: auto;
+            max-height: 90vh;
+        }
+    }
+}
+#menu{
+    @include grid(1,0,0);
+    @include desktop{
+        @include grid(2,0,0);
+    }
+    height: 100%;
+    width: 100%;
+    a{
+        display: flex;
+        height: 100%;
+        width: 100%;
+        color: $blanco;
+        font-weight: 900;
+        font-size: 3.5rem;
+        text-transform: uppercase;
+        justify-content: center;
+        text-shadow: 0 .5rem $negro;
+        @include desktop{
+            font-size: 5rem;
+            color: $negro;
+            text-shadow: none;
+        }
+        &.izquierdo{
+            align-items: flex-start;
+            padding-top: 10rem;
+            background-color: $color02;
+            @include desktop{
+                align-items: center;
+                justify-content: start;
+                background-color: $blanco;
+                padding:0 0 0 10rem;
+                transition: 
+                    background-color .5s ease,
+                    color .5s ease,
+                    text-shadow .5s ease;
+                &:hover{
+                    background-color: $color02;
+                    color : $blanco;
+                    text-shadow: -1rem 0 $negro;
+                }
+            }
+        }  
+        &.derecho{
+            padding-bottom: 10rem;
+            align-items: flex-end;
+            background-color: $color01;
+            @include desktop{
+                align-items: center;
+                justify-content: end;
+                background-color: $blanco;
+                padding:0 10rem 0 0;
+                transition: 
+                background-color .5s ease,
+                color .5s ease,
+                text-shadow .5s ease;
+                &:hover{
+                    background-color: $color01;
+                    color : $blanco;
+                    text-shadow: 1rem 0 $negro;
+                }
+            }
+        }
+    }
+}

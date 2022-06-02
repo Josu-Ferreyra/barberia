@@ -5,7 +5,7 @@
  * 1. Correct the line height in all browsers.
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
-@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;700&family=Roboto+Mono&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700;900&display=swap");
 html {
   line-height: 1.15;
   /* 1 */
@@ -341,7 +341,8 @@ template {
 html {
   box-sizing: border-box;
   font-size: 62.5%;
-  font-family: "Quicksand", sans-serif;
+  font-family: "Montserrat", sans-serif;
+  scroll-behavior: smooth;
 }
 
 *, *:before, *:after {
@@ -385,19 +386,103 @@ h4 {
 
 #home {
   display: flex;
-  flex-direction: column;
-  background-color: #e6e6e6;
+  width: 100vw;
+  height: 100vh;
 }
-#home h1 {
-  color: #32dd71;
-  text-align: center;
-  line-height: 60vh;
-  height: 60vh;
+#home img {
+  position: absolute;
+  align-self: center;
+  right: 0;
+  left: 0;
+  margin: 0 auto;
+  height: auto;
+  max-width: 45vw;
+}
+@media (min-width: 768px) {
+  #home img {
+    max-width: 25vw;
+  }
+}
+@media (min-width: 1200px) {
+  #home img {
+    width: auto;
+    max-height: 90vh;
+  }
+}
+
+#menu {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  column-gap: 0;
+  row-gap: 0;
+  justify-items: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+@media (min-width: 1200px) {
+  #menu {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 0;
+    row-gap: 0;
+    justify-items: center;
+    align-items: center;
+  }
+}
+#menu a {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  color: #FFF;
+  font-weight: 900;
+  font-size: 3.5rem;
   text-transform: uppercase;
-  background-color: #000;
-  animation: titulo 5s infinite;
+  justify-content: center;
+  text-shadow: 0 0.5rem #000;
 }
-#home h2 {
-  height: 40vh;
-  background-color: #32dd71;
+@media (min-width: 1200px) {
+  #menu a {
+    font-size: 5rem;
+    color: #000;
+    text-shadow: none;
+  }
+}
+#menu a.izquierdo {
+  align-items: flex-start;
+  padding-top: 10rem;
+  background-color: #fc0000;
+}
+@media (min-width: 1200px) {
+  #menu a.izquierdo {
+    align-items: center;
+    justify-content: start;
+    background-color: #FFF;
+    padding: 0 0 0 10rem;
+    transition: background-color 0.5s ease, color 0.5s ease, text-shadow 0.5s ease;
+  }
+  #menu a.izquierdo:hover {
+    background-color: #fc0000;
+    color: #FFF;
+    text-shadow: -1rem 0 #000;
+  }
+}
+#menu a.derecho {
+  padding-bottom: 10rem;
+  align-items: flex-end;
+  background-color: #1b459b;
+}
+@media (min-width: 1200px) {
+  #menu a.derecho {
+    align-items: center;
+    justify-content: end;
+    background-color: #FFF;
+    padding: 0 10rem 0 0;
+    transition: background-color 0.5s ease, color 0.5s ease, text-shadow 0.5s ease;
+  }
+  #menu a.derecho:hover {
+    background-color: #1b459b;
+    color: #FFF;
+    text-shadow: 1rem 0 #000;
+  }
 }

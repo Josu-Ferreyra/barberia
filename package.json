@@ -1,14 +1,14 @@
 {
-  "name": "portfolio",
+  "name": "barberia",
   "version": "1.0.0",
-  "description": "My own portfolio",
+  "description": "Pagina modelo de lo que podría ser una barberia",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Josu-Ferreyra/portfolio.git"
+    "url": "git+https://github.com/Josu-Ferreyra/barberia.git"
   },
   "keywords": [
     "Josué",
@@ -22,9 +22,9 @@
   "author": "Josué Ferreyra",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Josu-Ferreyra/portfolio/issues"
+    "url": "https://github.com/Josu-Ferreyra/barberia/issues"
   },
-  "homepage": "https://github.com/Josu-Ferreyra/portfolio#readme",
+  "homepage": "https://github.com/Josu-Ferreyra/barberia#readme",
   "devDependencies": {
     "gulp": "^4.0.2",
     "gulp-concat": "^2.6.1",
