@@ -400,7 +400,7 @@ h4 {
 }
 @media (min-width: 768px) {
   #home img {
-    max-width: 25vw;
+    max-width: 35vw;
   }
 }
 @media (min-width: 1200px) {
@@ -494,35 +494,105 @@ h4 {
   row-gap: 0;
   justify-items: center;
   align-items: center;
+  margin: 0;
   height: 100vh;
   width: 100vw;
 }
-#servicios img {
-  max-width: 80%;
-  height: auto;
+@media (min-width: 1200px) {
+  #servicios {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 0;
+    row-gap: 0;
+    justify-items: center;
+    align-items: center;
+  }
 }
-
-#catalogo {
-  background-color: #ff9696;
+#servicios #catalogo {
+  background-color: #ffb0b0;
   width: 100%;
   height: 100%;
+  overflow-y: scroll;
+  scrollbar-width: thin;
 }
-#catalogo .servicio {
+@media (min-width: 768px) {
+  #servicios #catalogo {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 0;
+    row-gap: 0;
+    justify-items: center;
+    align-items: center;
+  }
+}
+#servicios img {
+  display: none;
+}
+@media (min-width: 1200px) {
+  #servicios img {
+    display: block;
+    max-width: 50%;
+    height: auto;
+  }
+}
+#servicios .btn-confirmarServicio {
+  position: relative;
+  height: 15vh;
+  background-color: #1b459b;
+  width: 100vw;
+  font-weight: 700;
+  font-size: 2.5rem;
+  color: #FFF;
+  padding-top: 5rem;
+  border: none;
+}
+#servicios .btn-confirmarServicio::after {
+  content: "Reservar Turno";
+  position: absolute;
+  background-color: #0c1e44;
+  line-height: 5vh;
+  height: 5vh;
+  width: 100%;
+  text-align: center;
+  top: 0vh;
+  left: 0;
+}
+#servicios .btn-apagado {
+  display: none;
+}
+
+.servicio {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   width: 90%;
   margin: 2rem auto;
+  padding: 1rem;
   border: 0.25rem solid #fc0000;
   border-radius: 1rem;
+  color: #fc0000;
   transition: border 0.2s ease;
 }
-#catalogo .servicio:hover {
+@media (min-width: 768px) {
+  .servicio {
+    height: 90%;
+  }
+}
+.servicio.selected {
+  border: 1rem solid #fc0000;
+}
+.servicio.selected .nombreServicio {
+  font-weight: 700;
+}
+.servicio.selected .precioServicio {
+  font-weight: 700;
+}
+.servicio:hover {
   border: 1rem solid #fc0000;
   cursor: pointer;
 }
-#catalogo .servicio .nombreServicio {
+.servicio .nombreServicio {
   font-size: 2rem;
   margin-bottom: 1rem;
 }
