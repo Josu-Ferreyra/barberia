@@ -7,6 +7,9 @@ html {
 *, *:before, *:after {
     box-sizing: inherit;
 }
+body{
+    overflow-x: hidden;
+}
 h1,h2,h3,h4,p,a{
     margin: 0;
     padding: 0;

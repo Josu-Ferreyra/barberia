@@ -55,6 +55,7 @@ function seleccionarServicio(){
                 calcTotal();
                 btn.textContent = `Total: $${total}`;
             }
+            displayTurno();
         });
     });
 }
@@ -65,4 +66,16 @@ function calcTotal(){
         return parseInt(elemento[1]);
     })
     total = precios.reduce((x,y) => x+y );
+}
+
+function displayTurno(){
+    const blockTurnos = document.querySelector('#turnos .default');
+    const ableTurnos = document.querySelector('#turnos .solicitarTurnos');
+    if (serviciosElegidos.length === 0){
+        ableTurnos.classList.add('hidden');
+        blockTurnos.classList.remove('hidden');
+    } else {
+        ableTurnos.classList.remove('hidden');
+        blockTurnos.classList.add('hidden');
+    }
 }

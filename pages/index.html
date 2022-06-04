@@ -21,16 +21,35 @@
         <img src="./src/img/barberia-logo.webp" alt="barberia-logo">
         <div id="menu">
             <a href="#servicios" class="izquierdo">Servicios</a>
-            <a href="#" class="derecho">Turnos</a>
+            <a href="#turnos" class="derecho">Turnos</a>
         </div>        
     </header>
     <div id="servicios">
         <div id="catalogo"></div>
-        <div>
-            <img src="./src/img/barber-pana.webp" alt="Barbero">
-            <button class="btn-confirmarServicio btn-apagado"></button>
+        <div id="apoyo">
+            <a href="#turnos">
+                <button class="btn-confirmarServicio btn-apagado"></button>
+            </a>            
+        </div>        
+    </div>
+    <div id="turnos">
+        <div class="default">
+            <p>¡OH!</p>
+            <p>Aún no has seleccionado ningún servicio</p>
+            <a href="#servicios"><button>Ir a Servicios</button></a>
         </div>
-        
+        <div class="solicitarTurnos">
+            <h2>Solicitud de Turno</h2>
+            <form autocomplete="off" action="#">
+                <label for="nombre">Nombre</label>
+                <input type="text" id="nombre" name="nombre" required>
+                <label for="dia">Día</label>
+                <input type="date" id="dia" name="dia" required>
+                <label for="hora">Horario</label>
+                <input type="time" id="hora" name="hora" min="08:00" max="20:00" required>
+                <input type="submit" id="submit" value="Solicitar Turno">
+            </form>
+        </div>
     </div>
     <script src="./src/js/app-min.js"></script>
 </body>
