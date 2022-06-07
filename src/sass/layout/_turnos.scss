@@ -1,78 +1,141 @@
 #turnos{
+    display: block;
     background-color: $color01;
+    height: fit-content;
+}
+.default{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0 1rem;
     height: 100vh;
-    .default{
+    width: 100%;
+    p{
+        @include tablet{
+            width: 80%;
+        }
+        font-size: 3.5rem;
+        text-align: center;
+        font-weight: 700;
+        margin: 1rem 0;
+        color: $blanco;
+    }
+    a{
+        @include tablet{
+            width: 40%;
+        }
+        margin-top: 3rem;
+        width: 70%;
+        text-align: center;
+        button{
+            background-color: $blanco;
+            width:100%;
+            padding: 3rem;
+            font-weight: 700;
+            border: none;
+            border-radius: 3rem;
+            box-shadow: -1rem 1rem darken($color01,20%);
+            cursor: pointer;
+        }
+    }
+}
+.solicitarTurnos{
+    padding: 1rem 0 3rem 0;
+    width: 95%;
+    margin: 0 auto;
+    @include desktop{
+        padding-top: 5rem;
+        height: 100vh;
+    }
+    h2{
+        background-color: darken($color01,20%);
+        color: $blanco;
+        padding: 1.5rem;
+        text-align: center;
+        text-transform: uppercase;
+    }
+    form{
+        @include tablet{
+            width: 50%;
+            margin: 2rem auto;
+        }
+        margin-top: 1rem;
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: center;
-        text-align: center;
-        height: 100%;
-        padding: 5rem;
-        p{
-            color: $blanco;
-            font-size: 3.5rem;
+        label{
+            font-size: 2rem;
             font-weight: 700;
+            margin: 1rem 0;
+            color: $blanco;
+        }
+        input{
+            width: 100%;
+            font-size: 1.5rem;
+            padding: 0.5rem 1.5rem;
+            border: none;
+            border-radius: 2rem;
+        }
+        #submit{
+            margin-top: 2rem;
+            padding: 1.5rem;
             text-transform: uppercase;
-            line-height: 1.5;
-            margin-bottom: 2rem;
+            font-weight: 700;
+            background-color: lighten($color01, 30%);
+            color: $blanco;
+            cursor: pointer;
+        }
+    }
+    #cuenta-servicios{
+        position: relative;
+        background-color: $blanco;
+        border-radius: 3rem 0;
+        margin-top: 4rem;
+        padding: 1rem 0 6rem 0;
+        @include tablet{
+            width: 50%;
+            margin: 5rem auto 0 auto;
+        }
+        p{
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin: 1rem 0;
+            text-align: center;
         }
         a{
+            position: absolute;
             width: 100%;
+            bottom: 0;
             button{
                 width: 100%;
-                margin-top: 2rem;
-                padding: 2rem;
-                background-color: $blanco;
                 border: none;
-                border-radius: 2rem;
-                box-shadow: -.5rem .5rem darken($color01, 20);
+                border-radius: 0 0 3rem 0;
+                font-size: 1.8rem;
                 font-weight: 700;
+                color: $color02;
+                padding: 1.5rem;
+                background-color: lighten($color02, 40%);
+                cursor: pointer;
             }
         }
     }
-    .solicitarTurnos{
-        padding: 2rem;
-        height: 100vh;
-        width: 100vw;
-        h2{
-            font-size: 3rem;
-            text-transform: uppercase;
-            text-align: center;
-            margin-bottom: 3rem;
-            background-color: darken($color01, 15);
-            color: $blanco;
-            padding: 1rem 0;
-        }
+}
+.contenedor-turnos{
+    @include desktop{
+        @include grid(2,2rem,0);
+        padding: 2rem 0;
         form{
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            label{
-                font-size: 2rem;
-                font-weight: 700;
-                color: $blanco;
-                margin: 1rem 0;
-            }
-            input{
-                width: 100%;
-                border: none;
-                padding: 1rem 2rem;
-                border-radius: 3rem;
-                font-size: 1.5rem;
-            }
-            #submit{
-                margin-top: 3rem;
-                padding: 2rem;
-                text-transform: uppercase;
-                font-weight: 700;
-                background-color: lighten($color01, 25);
-                color: $blanco;
-            }
+            width: 75%;
+            height: 100%;
+        }
+        #cuenta-servicios{
+            width: 90%;
+            height: 100%;
         }
     }
-    .hidden{
-        display: none;
-    }
+}
+    
+.hidden{
+    display: none;
 }

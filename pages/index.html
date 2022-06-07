@@ -38,17 +38,21 @@
             <p>Aún no has seleccionado ningún servicio</p>
             <a href="#servicios"><button>Ir a Servicios</button></a>
         </div>
-        <div class="solicitarTurnos">
+        <div class="solicitarTurnos hidden">
             <h2>Solicitud de Turno</h2>
-            <form autocomplete="off" action="#">
-                <label for="nombre">Nombre</label>
-                <input type="text" id="nombre" name="nombre" required>
-                <label for="dia">Día</label>
-                <input type="date" id="dia" name="dia" required>
-                <label for="hora">Horario</label>
-                <input type="time" id="hora" name="hora" min="08:00" max="20:00" required>
-                <input type="submit" id="submit" value="Solicitar Turno">
-            </form>
+            <div class="contenedor-turnos">
+                <form autocomplete="off" action="#">
+                    <label for="nombre">Nombre</label>
+                    <input type="text" id="nombre" name="nombre" required>
+                    <label for="dia">Día</label>
+                    <input type="date" id="dia" name="dia" required>
+                    <label for="hora">Horario</label>
+                    <input type="time" id="hora" name="hora" min="08:00" max="20:00" required>
+                    <input type="submit" id="submit" value="Solicitar Turno">
+                </form>
+                <div id="cuenta-servicios"></div>
+            </div>
+            
         </div>
     </div>
     <script src="./src/js/app-min.js"></script>

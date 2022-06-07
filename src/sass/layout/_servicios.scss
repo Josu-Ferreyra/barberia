@@ -33,6 +33,7 @@
         }
         &:hover{
             border-width: 1rem;
+            cursor: pointer;
         }
         &.selected{
             border-width: 1rem;
@@ -71,6 +72,7 @@
         margin-top: 5vh;
         background-color: $color01;
         color: $blanco;
+        cursor: pointer;
         @include desktop{
             position: absolute;
             bottom: 0;

@@ -538,6 +538,7 @@ h4 {
 }
 #catalogo .servicio:hover {
   border-width: 1rem;
+  cursor: pointer;
 }
 #catalogo .servicio.selected {
   border-width: 1rem;
@@ -578,6 +579,7 @@ h4 {
   margin-top: 5vh;
   background-color: #1b459b;
   color: #FFF;
+  cursor: pointer;
 }
 @media (min-width: 1200px) {
   #apoyo .btn-confirmarServicio {
@@ -610,80 +612,161 @@ h4 {
 }
 
 #turnos {
+  display: block;
   background-color: #1b459b;
-  height: 100vh;
+  height: fit-content;
 }
-#turnos .default {
+
+.default {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  text-align: center;
-  height: 100%;
-  padding: 5rem;
+  padding: 0 1rem;
+  height: 100vh;
+  width: 100%;
 }
-#turnos .default p {
-  color: #FFF;
+.default p {
   font-size: 3.5rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  line-height: 1.5;
-  margin-bottom: 2rem;
-}
-#turnos .default a {
-  width: 100%;
-}
-#turnos .default a button {
-  width: 100%;
-  margin-top: 2rem;
-  padding: 2rem;
-  background-color: #FFF;
-  border: none;
-  border-radius: 2rem;
-  box-shadow: -0.5rem 0.5rem #0c1e44;
-  font-weight: 700;
-}
-#turnos .solicitarTurnos {
-  padding: 2rem;
-  height: 100vh;
-  width: 100vw;
-}
-#turnos .solicitarTurnos h2 {
-  font-size: 3rem;
-  text-transform: uppercase;
   text-align: center;
-  margin-bottom: 3rem;
-  background-color: #10285a;
+  font-weight: 700;
+  margin: 1rem 0;
   color: #FFF;
-  padding: 1rem 0;
 }
-#turnos .solicitarTurnos form {
+@media (min-width: 768px) {
+  .default p {
+    width: 80%;
+  }
+}
+.default a {
+  margin-top: 3rem;
+  width: 70%;
+  text-align: center;
+}
+@media (min-width: 768px) {
+  .default a {
+    width: 40%;
+  }
+}
+.default a button {
+  background-color: #FFF;
+  width: 100%;
+  padding: 3rem;
+  font-weight: 700;
+  border: none;
+  border-radius: 3rem;
+  box-shadow: -1rem 1rem #0c1e44;
+  cursor: pointer;
+}
+
+.solicitarTurnos {
+  padding: 1rem 0 3rem 0;
+  width: 95%;
+  margin: 0 auto;
+}
+@media (min-width: 1200px) {
+  .solicitarTurnos {
+    padding-top: 5rem;
+    height: 100vh;
+  }
+}
+.solicitarTurnos h2 {
+  background-color: #0c1e44;
+  color: #FFF;
+  padding: 1.5rem;
+  text-align: center;
+  text-transform: uppercase;
+}
+.solicitarTurnos form {
+  margin-top: 1rem;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
 }
-#turnos .solicitarTurnos form label {
+@media (min-width: 768px) {
+  .solicitarTurnos form {
+    width: 50%;
+    margin: 2rem auto;
+  }
+}
+.solicitarTurnos form label {
   font-size: 2rem;
   font-weight: 700;
-  color: #FFF;
   margin: 1rem 0;
+  color: #FFF;
 }
-#turnos .solicitarTurnos form input {
+.solicitarTurnos form input {
   width: 100%;
-  border: none;
-  padding: 1rem 2rem;
-  border-radius: 3rem;
   font-size: 1.5rem;
+  padding: 0.5rem 1.5rem;
+  border: none;
+  border-radius: 2rem;
 }
-#turnos .solicitarTurnos form #submit {
-  margin-top: 3rem;
-  padding: 2rem;
+.solicitarTurnos form #submit {
+  margin-top: 2rem;
+  padding: 1.5rem;
   text-transform: uppercase;
   font-weight: 700;
-  background-color: #5483e1;
+  background-color: #6a92e5;
   color: #FFF;
+  cursor: pointer;
 }
-#turnos .hidden {
+.solicitarTurnos #cuenta-servicios {
+  position: relative;
+  background-color: #FFF;
+  border-radius: 3rem 0;
+  margin-top: 4rem;
+  padding: 1rem 0 6rem 0;
+}
+@media (min-width: 768px) {
+  .solicitarTurnos #cuenta-servicios {
+    width: 50%;
+    margin: 5rem auto 0 auto;
+  }
+}
+.solicitarTurnos #cuenta-servicios p {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 1rem 0;
+  text-align: center;
+}
+.solicitarTurnos #cuenta-servicios a {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+}
+.solicitarTurnos #cuenta-servicios a button {
+  width: 100%;
+  border: none;
+  border-radius: 0 0 3rem 0;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #fc0000;
+  padding: 1.5rem;
+  background-color: #ffc9c9;
+  cursor: pointer;
+}
+
+@media (min-width: 1200px) {
+  .contenedor-turnos {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 2rem;
+    row-gap: 0;
+    justify-items: center;
+    align-items: center;
+    padding: 2rem 0;
+  }
+  .contenedor-turnos form {
+    width: 75%;
+    height: 100%;
+  }
+  .contenedor-turnos #cuenta-servicios {
+    width: 90%;
+    height: 100%;
+  }
+}
+
+.hidden {
   display: none;
 }

@@ -56,6 +56,7 @@ function seleccionarServicio(){
                 btn.textContent = `Total: $${total}`;
             }
             displayTurno();
+            cuentaServicios();
         });
     });
 }
@@ -78,4 +79,23 @@ function displayTurno(){
         ableTurnos.classList.remove('hidden');
         blockTurnos.classList.add('hidden');
     }
+}
+
+function cuentaServicios(){
+    const root = document.querySelector('#cuenta-servicios');
+    let x = root.childNodes.length;
+    for(x; x > 0; x--){
+        root.childNodes[x-1].remove();
+    }
+    serviciosElegidos.forEach(servicio => {
+        const nombreServicio = document.createElement('P');
+        nombreServicio.textContent = servicio[0];
+        root.appendChild(nombreServicio);
+    });
+    const link = document.createElement('A');
+    const button = document.createElement('BUTTON');
+    link.href = '#servicios';
+    button.textContent = 'Modificar Servicios';
+    link.appendChild(button);
+    root.appendChild(link);
 }
